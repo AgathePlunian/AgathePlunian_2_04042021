@@ -19,22 +19,6 @@ ul , li {
   padding:0;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.row {
-  flex-flow: row wrap;
-}
-
-.column {
-  flex-flow: column wrap;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
 .main-wrapper {
   margin: auto;
   padding: 1em;
@@ -63,6 +47,23 @@ img {
   width: 100%;
 }
 
+/* FLEXBOX */
+
+.d-flex {
+  display: flex;
+}
+
+.row {
+  flex-flow: row wrap;
+}
+
+.column {
+  flex-flow: column wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
 
 /* TITRES*/
 
@@ -130,6 +131,7 @@ img {
   background-color: #FFFF;
   box-sizing: border-box;
   margin-bottom: 2em;
+  box-shadow: #dddddd 3px 3px 3px, #dddddd -3px -3px 3px;
 }
 
 /* search result*/
@@ -191,7 +193,6 @@ img {
   width: fit-content;
 }
 
-
 .info {
   margin-bottom: 2em;
 }
@@ -199,26 +200,31 @@ img {
 /* first section */
 
 .main-results, .most-popular {
-  padding: 3%;
+  padding: 0 3%;
   box-sizing: border-box;
+  border-radius: 15px;
 }
 
-.main-results , .most-popular {
-  border-radius: 15px;
+/* RESULT COL LEFT*/
+
+.results-footer {
+  margin-bottom: 3em;
+}
+.results-footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
 }
 
 .main-results {
   width: 67%;
 }
 
-.most-popular {
-  width: 30%;
-}
-
 .results-body {
   box-sizing: border-box;
 }
 
+/* CARDS */
 
 .img-card {
   border-radius: 15px 15px 0 0;
@@ -238,9 +244,11 @@ img {
   padding-left: 0.5em;
 }
 
+/* ASIDE MOST POPULAR */
 
-/* aside */
-
+.most-popular {
+  width: 30%;
+}
 
 .aside-img {
   width: 40%;
@@ -263,4 +271,17 @@ img {
 
 .most-popular .card {
   height: 10em;
+}
+
+.main-aside {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 85%;
+  padding-bottom: 3%;
+}
+
+.main-aside div:last-child {
+  margin-bottom: 0;
 }
