@@ -21,7 +21,9 @@ ul , li {
 
 .main-wrapper {
   margin: auto;
-  padding: 1em;
+  max-width: 1920px;
+  padding: 2%;
+  box-sizing: border-box;
 }
 
 html {
@@ -77,13 +79,26 @@ img {
 }
 
 .l-col-4 {
-  width: calc(((100% / 12) * 4) - 2%);
+  width: calc(((100% / 12) * 4) - 2.8%);
+  margin-right: 0.7%;
+  margin-left: 0.7%;
 }
 
+.l-col-3 {
+  width: calc(((100% / 12) * 3) - 2.8%);
+  margin-right: 0.7%;
+  margin-left: 0.7%;
+}
+
+
 .item a {
-  margin: 10px;
+  margin: 20px;
   text-decoration: none;
   color: #0065FC;
+}
+
+.item a:hover, .results-footer a:hover {
+  color:#999999;
 }
 
 /* search bar*/
@@ -123,7 +138,7 @@ img {
   border-radius: 0 15px 15px 0;
 }
 
-/* cards global */
+/* CARDS GLOBAL*/
 
 .card {
   padding: 0.3em;
@@ -134,7 +149,7 @@ img {
   box-shadow: #dddddd 3px 3px 3px, #dddddd -3px -3px 3px;
 }
 
-/* search result*/
+/* SEARCH RESULTS */
 
 .search-filters {
   margin-bottom: 2em;
@@ -197,15 +212,24 @@ img {
   margin-bottom: 2em;
 }
 
-/* first section */
+/* FIRST SECTION */
+
+.results-header, .aside-header {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
 
 .main-results, .most-popular {
-  padding: 0 3%;
+  padding: 0 2%;
   box-sizing: border-box;
   border-radius: 15px;
 }
 
-/* RESULT COL LEFT*/
+.results-container {
+  margin-bottom: 5em;
+}
+
+/* RESULT COLUMN LEFT*/
 
 .results-footer {
   margin-bottom: 3em;
@@ -213,29 +237,32 @@ img {
 .results-footer a {
   text-decoration: none;
   color: black;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .main-results {
-  width: 67%;
+  width: 68%;
 }
 
 .results-body {
   box-sizing: border-box;
 }
 
+.main-results .card {
+  height: 200px;
+}
 /* CARDS */
 
 .img-card {
-  border-radius: 15px 15px 0 0;
   max-width: 100%;
-  height: 120px;
+  height: 55%;
   overflow: hidden;
   display: flex;
   align-items: top;
 }
 
 .img-card img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
   height: 100%;
 }
@@ -259,15 +286,6 @@ img {
   width: 100%;
   height: 100%;
 }
-/* etoiles*/
-
-.blue-star {
-  color: #0065FC;
-}
-
-.grey-star {
-  color: #dddddd;
-}
 
 .most-popular .card {
   height: 10em;
@@ -284,4 +302,55 @@ img {
 
 .main-aside div:last-child {
   margin-bottom: 0;
+}
+
+
+/* STARS COLORS*/
+
+.blue-star {
+  color: #0065FC;
+}
+
+.grey-star {
+  color: #dddddd;
+}
+
+
+/* ACTIVITIES */
+
+.main-activities-section {
+  height: 430px;
+}
+
+
+.main-activities-section .card{
+  padding: 0;
+}
+
+.main-activities-section .tall-card{
+  height: 430px;
+  overflow: hidden;
+}
+
+.img-card-activity img {
+  height: fit-content;
+  width: auto;
+  border-radius: 15px;
+}
+
+.img-card-activity {
+  height: 80%;
+  overflow: hidden;
+  border-radius: 15px ;
+} 
+ 
+.test {
+  height: 430px;
+  overflow: hidden;
+}
+
+
+.small-card{
+  max-height: 50% ;
+  overflow: hidden;
 }
