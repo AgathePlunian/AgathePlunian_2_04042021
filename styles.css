@@ -22,12 +22,13 @@ ul , li {
 .main-wrapper {
   margin: auto;
   max-width: 1920px;
-  padding: 2%;
   box-sizing: border-box;
+  padding: 3%;
 }
 
 html {
   font-size: 100%;
+  padding: 0;
 }
 
 p {
@@ -39,6 +40,7 @@ body {
   font-family: Raleway, sans-serif;
 	font-size: 14px;
   line-height: 1.25em;
+  margin: 0 auto;
 }
 
 .bg-grey {
@@ -47,6 +49,10 @@ body {
 
 img {
   width: 100%;
+}
+
+h1 {
+  margin-bottom: 0.5em;
 }
 
 /* FLEXBOX */
@@ -315,33 +321,32 @@ img {
   color: #dddddd;
 }
 
-
 /* ACTIVITIES */
 
 .main-activities-section {
   height: 430px;
+  margin-bottom: 2em;
+  justify-content: space-between;
 }
 
-
-.main-activities-section .card{
+.main-activities-section .card {
   padding: 0;
 }
 
-.main-activities-section .tall-card{
+.main-activities-section .tall-card {
   height: 430px;
-  overflow: hidden;
 }
 
 .img-card-activity img {
   height: fit-content;
   width: auto;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .img-card-activity {
   height: 80%;
   overflow: hidden;
-  border-radius: 15px ;
+  border-radius: 15px;
 } 
  
 .test {
@@ -349,8 +354,30 @@ img {
   overflow: hidden;
 }
 
-
 .small-card{
   max-height: 50% ;
   overflow: hidden;
+}
+
+/* MAIN FOOTER */
+
+.main-footer {
+  background-color:#F2F2F2;
+  padding: 3%;
+}
+
+.main-footer ul {
+  margin-right: 15%;
+}
+
+.main-footer .list-header {
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+.main-footer li a {
+  display: block;
+  color: #8b8b8b;
+  text-decoration: none;
+  margin-bottom: 0.5em;
 }
