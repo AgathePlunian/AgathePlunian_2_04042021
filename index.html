@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  <title>Reservia</title>
 	<meta charset="utf-8">
   <link href="fontawesome/css/all.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +14,7 @@
   <body>
 <!--MAIN HEADER INCLUDING NAV-->
       <header class="main-header">
-        <nav class="main-nav d-flex space-between">
+        <nav class="main-nav d-flex space-between nav-desktop">
           <div class="logo">
             <img src="images/logo/Reservia.svg">
           </div>
@@ -24,6 +25,18 @@
               <li class="item"><a href="#">S'inscrire</a></li>
             </ul>
           </div>
+        </nav>
+
+        <nav class="nav-mobile">
+          <div class="logo-mobile">
+            <img src="images/logo/Reservia.svg">
+            <a href="#">S'inscrire</a>
+          </div>
+
+          <ul class="d-flex row nav-items">
+            <li class="item selected"><a href="#Hébergements">Hébergements</a></li>
+            <li class="item unselected"><a href="#activites">Activités</a></li> 
+          </ul>
         </nav>
       </header>
 
@@ -37,13 +50,22 @@
             <input type="search" placeholder="Marseille, France">
             <input type="submit" value="Rechercher">
           </div>
+
+          <!--MOBILE SEARCH BAR-->
+          <div class="search-bar-mobile">
+            <i class="localisation-logo fas fa-map-marker-alt"></i>
+            <input type="search" placeholder="Marseille, France">
+            <button class="search-button" type="submit" value="rechercher"><i class="fas fa-search"></i></button>
+          </div>
+
+          <!--FILTRES-->
           <div class="search-filters">
             <ul class="filter-list d-flex row">
-              <li class="title-filter">Filtres</li>
-              <a href="#"><li class="filter"><i class="fas fa-money-bill-wave"></i>Economique</li></a>
-              <a href="#"><li class="filter"><i class="fas fa-child"></i>Familial</li></a>
-              <a href="#"><li class="filter"><i class="fas fa-heart"></i>Romantique</li></a>
-              <a href="#"><li class="filter"><i class="fas fa-dog"></i>Animaux autorisés</li></a>
+              <div class="filter-title"><li class="title-filter">Filtres</li></div>
+              <a href="#"><li class="filter"><div><i class="fas fa-money-bill-wave"></i></div>Economique</li></a>
+              <a href="#"><li class="filter"><div><i class="fas fa-child"></i></div>Familial</li></a>
+              <a href="#"><li class="filter"><div><i class="fas fa-heart"></i></div>Romantique</li></a>
+              <a href="#"><li class="filter"><div><i class="fas fa-dog"></i></div>Animaux autorisés</li></a>
             </ul>
           </div>
           <div class="info">
@@ -73,7 +95,8 @@
                   <div class="card-body">
                     <h3>Auberge la Cannebière</h3>
                     <p>Nuit à partir de <strong>25€</strong></p>
-                    <div><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="grey-star fas fa-star"></i></div>
+                    <div>
+                      <i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="grey-star fas fa-star"></i></div>
                   </div>
                 </div>
               </a>
@@ -159,41 +182,41 @@
             <div class="main-aside">
 
               <a href="#" class="card">
-                <div class="d-flex">
-                  <div class="aside-img">
-                    <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
-                  </div>
-                  <div class="card-body">
+                 <div class="aside-img">
+                  <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
+                </div>
+                <div class="card-body">
+                  <div>
                     <h3>Hôtel Le soleil du matin</h3>
                     <p>Nuit à partir de 128€</p>
-                    <div class="stars-div"><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i></div>
                   </div>
+                  <div class="stars-div"><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i></div>
                 </div>
               </a>
 
               <a href="#" class="card">
-                <div class="d-flex">
-                  <div class="aside-img">
-                    <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
-                  </div>
-                  <div class="card-body">
+                <div class="aside-img">
+                  <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                </div>
+                <div class="card-body">
+                  <div>
                     <h3>Au coeur de l'eau Chambres d'hôtes</h3>
                     <p>Nuit à partir de 75€</p>
-                    <div class="stars-div"><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="grey-star fas fa-star"></i></div>
-                  </div>
                 </div>
+                <div class="stars-div"><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="grey-star fas fa-star"></i></div>
+               </div>
               </a> 
 
               <a href="#" class="card">
-                <div class="d-flex">
-                  <div class="aside-img">
-                    <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
-                  </div>
-                  <div class="card-body">
+                <div class="aside-img">
+                  <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
+                </div>
+                <div class="card-body">
+                  <div>
                     <h3>Hôtel Tout bleu et Blanc</h3>
                     <p>Nuit à partir de 60€</p>
-                    <div class="stars-div"><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="grey-star fas fa-star"></i></div>
                   </div>
+                  <div class="stars-div"><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="blue-star fas fa-star"></i><i class="grey-star fas fa-star"></i></div>
                 </div>
               </a>
             </div>
