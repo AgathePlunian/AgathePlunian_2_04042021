@@ -59,7 +59,7 @@ p {
 }
 
 h1 {
-  font-family:'Raleway';
+  font-family:'Raleway', sans-serif;
   font-size: 1.4em;
   margin: 0.5em 0;
   font-weight: bold;
@@ -402,10 +402,11 @@ h5 {
   width: max-content;
 }
 
+
 .main-aside .card-body {
   width: 50%;
   display: flex;
-  flex-flow: column;
+  flex-flow: column ;
   justify-content: space-between;
 }
 
@@ -459,7 +460,7 @@ h5 {
 }
 
 .img-card-activity img {
-  width: 100%;
+  width: 120%;
   height: max-content;
 }
 
@@ -558,7 +559,7 @@ h5 {
 
 /*  TABLET */
 
-@media screen and (min-width:689px) and (max-width:1024px) {
+@media screen and (min-width:768px) and (max-width:991px) {
 
   /* HEADER */
   .search-area {
@@ -677,7 +678,7 @@ h5 {
 }
 /* MOBILE */
 
- @media screen and (max-width:688px){
+ @media screen and (max-width:767px){
   
   body {
     font-size: 16px;
