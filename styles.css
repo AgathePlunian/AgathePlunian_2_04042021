@@ -578,8 +578,9 @@ h5 {
 
   .main-results {
     width: 100%;
-    margin-bottom: 2em;
     border-radius: 0;
+    order: 2;
+    background-color: white;
   }
 
   .main-results .card {
@@ -589,7 +590,8 @@ h5 {
 
   .most-popular { 
     width: 100%;
-    background: white;
+    order: 1;
+    border-radius: 0;
   }
 
   .header-activities {
