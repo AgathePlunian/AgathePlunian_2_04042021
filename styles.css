@@ -17,7 +17,7 @@
 /* raleway-600 - latin */
 @font-face {
   font-family: 'Raleway';
-  font-style: bold;
+  font-style: normal;
   font-weight: 600;
   src: url('Raleway/raleway-v19-latin-600.eot'); /* IE9 Compat Modes */
   src: local(''),
@@ -130,6 +130,11 @@ h5 {
   padding-left: 3%;
 }
 
+.nav-items {
+  display: flex;
+  flex-flow: row;
+}
+
 .item a {
   padding: 35px 25px 20px 25px;
   text-decoration: none;
@@ -152,17 +157,29 @@ h5 {
 
 /* SEARCH BAR*/
 
-.search-filters a {
-  color: black;
-  text-decoration: none;
+.loupe-logo {
+  display: none;
 }
 
-.search-filters a:hover {
-  color:#0065FC
+.search-button {
+  background-color:#0065FC;
+  border: none;
+  color: white;
+  border-radius: 0 14px 14px 0;
+  padding: 0 15px;
 }
+
+.search-button:hover {
+  cursor: pointer;
+  background-color:rgb(53, 132, 252) ;
+}
+
+
 
 .main-nav {
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .search-bar {
@@ -172,9 +189,9 @@ h5 {
   margin-top: 1.2em;
 }
 
-.search-bar i {
+.search-bar .icone-place  {
   background-color: #F2F2F2;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 15px 10px 15px;
   border-radius: 15px 0 0 15px;
   margin: 0;
 }
@@ -206,11 +223,17 @@ h5 {
 
 /* SEARCH RESULTS FILTERS */
 
+.search-filters a {
+  color: black;
+  text-decoration: none;
+}
+
 .search-filters {
   margin-bottom: 1.5em;
 }
 
-.filter {
+.filter a{
+  display: block;
   height: 15px;
   border: 1px solid #c5c3c3;
   border-radius: 20px;
@@ -220,6 +243,12 @@ h5 {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 10px;
+}
+
+.filter a:hover {
+  background-color: #c3dbff;
+  color: #0065FC;
+  border-color: #c3dbff;
 }
 
 .title-filter {
@@ -546,17 +575,6 @@ h5 {
 
  }
 
- /* NAV MOBILE */
-
-.nav-mobile {
-  display: none;
-}
-
-.search-bar-mobile {
-  display: none;
-}
-
-
 /*  TABLET */
 
 @media screen and (min-width:768px) and (max-width:991px) {
@@ -681,7 +699,7 @@ h5 {
 /* MOBILE */
 
  @media screen and (max-width:767px){
-  
+
   body {
     font-size: 16px;
     line-height: 1.2em;
@@ -691,25 +709,61 @@ h5 {
     line-height: 1.2em;
   }
 
-  .main-header , .main-wrapper {
+  .main-wrapper {
     padding: 0;
   }
   
   /* NAVBAR */
 
-  .nav-items {
-    margin-bottom: 1.5em;
-    display: flex;
-    flex-flow: wrap;
+  .main-header {
+    padding: 0;
   }
 
-  .nav-desktop {
-    display: none;
-  }
-
-  .nav-mobile {
+  .main-nav {
     display: block;
     margin-bottom: 2em;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .item-nav-1, .item-nav-2{
+    text-align: center;
+    width: 50%;
+    display: block;
+    border-bottom: #c5c3c3 2px solid;
+  }
+
+  .logo{
+    padding-left: 3%;
+    padding-top: 25px;
+    width: 20%;
+  }
+
+  .subscribe{
+   position: absolute;
+   top: 0px;
+   right: 0px;
+  }
+
+  .item-nav-1:active , .item-nav-2:active {
+    border-color:  #0065FC;
+  }
+
+  .item a {
+    border-top: none;
+  }
+
+  .item a:hover, .item a:active {
+    border-top: none;
+  }
+
+  .num2 {
+    width: 100%;
+    order: 2;
+    display: flex;
   }
 
   .search-area {
@@ -761,8 +815,20 @@ h5 {
 
 /* SEARCH BAR */
 
-  .search-bar {
+  .text-button {
     display: none;
+  }
+
+  .search-bar .icone-place {
+    padding: 15px 20px; 
+  } 
+
+  .search-area {
+    width: 90%;
+  }
+
+  .loupe-logo {
+    display: block;
   }
 
   .search-bar-mobile {
@@ -815,6 +881,7 @@ h5 {
   /* FILTERS */
   .filter {
     margin-left: 0;
+    font-weight: bold;
   }
 
   .info span {
